@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made @ Ksgz (GitHub) -->
+  <title>The Terminator Fan Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link rel="icon" type="images/fav.png" href="images/fav.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+  }
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #111;
+  }
+  .container {
+    padding: 80px 120px;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 1;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%); /* make all photos black and white */ 
+    width: 60%; /* Set width to 100% */
+    margin: auto;
+    position: relative; top: 50px;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: #000000;
+    color: #ffffff;
+  }
+  .bg-1 h3 {color: rgb(255, 0, 0);}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }  
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #000000;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  }
+  footer {
+    background-color: #000000;
+    color: #f5f5f5;
+    padding: 32px;
+    position: relative; top: 50px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+  .logo {
+    border-color: transparent;
+  }
+  .footimg {
+    margin-left: 80%;
+    position: relative; top: -250px;
+  }
+  .footimg1 {
+    margin-right: 20px;
+    position: absolute; bottom: -3000px;
+  }
+  .instagram {
+    width: 1.3%;
+    height: 1.3%;
+    position: relative; right: -58%; top: -27px;
+    background-color: white;
+  }
+  .github {
+    width: 1.3%;
+    height: 1.3%;
+    position: relative; right: -61%; top: -59px;
+    background-color: white;
+  }
+  /* The alert message box */
+  .alert {
+   padding: 20px;
+   background-color: #ff1100; /* Red */
+    color: white;
+    margin-bottom: 15px;
+  }
+  /* The close button */
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  /* When moving the mouse over the close button */
+  .closebtn:hover {
+    color: black;
+  }
+  .logo2 {
+    position: absolute; top: 1530px; left: 500px; 
+  } 
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <div style="position: absolute; left: 0px; top: -25px;" class="logo" data-target="#myPage" href="#myPage"> 
+        <img src="images/logo.png" href="#myPage" width="200" height="110">
+    </div>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">HOME</a></li>
+        <li><a href="#Characters">CHARACTERS</a></li>
+        <li><a href="#watchnow">Watch now</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Merchandise</a></li>
+            <li><a href="#">Extras</a></li>
+            <li><a href="#">Media</a></li> 
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="images/200.gif" alt="herp" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Hercules</h3>
+          <p>This is a picture taken from the 1997 Film</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="images/terminator-logo-font-download.jpg" alt="game" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Hercules's Action Game</h3>
+          <p>This is Disney's Hercules  Action Game based on 1997 Film</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="images/fan.jpg" alt="Family" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Hercules's Family Photo</h3>
+          <p>This is a picture taken from the 1997 Film</p>
+        </div>      
+      </div>
+    
+      <div class="item">
+        <img src="images/gif2.gif" alt="gif2" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>LA</h3>
+          <p>This is a gif from the 1997 Film</p>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+<!--Popup Banner--->
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  This page is a fan made website. Warning! This page is not Mobile Friendly. 
+</div>
+<!-- Container (The Character Section) -->
+<div id="Characters" class="container text-center">
+  <h3> MEET THE CHARACTERS</h3>
+  <p><em>We love Hercules!</em></p>
+  <p>We have created a fictional Fan website. </p>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p class="text-center"><strong><u>Hercules</u></strong></p><br>
+      <a href="#demo" data-toggle="collapse">
+        <img src="images/hercgif2.gif" class="img-circle person" alt="Hercules" width="255" height="255">
+      </a>
+      <div id="demo" class="collapse">
+        <p>Main Character</p>
+        <p>I do tha Lorem Ipsumlings</p>
+        <p>I do tha Lorem Ipsumlings'</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong><u>Megara</u></strong></p><br>
+      <a href="#demo2" data-toggle="collapse">
+        <img src="images/megan.gif" class="img-circle person" alt="megan" width="255" height="255">
+      </a>
+      <div id="demo2" class="collapse">
+        <p>I do tha Lorem Ipsumlings</p>
+        <p>I do tha Lorem Ipsumlings'</p>
+        <p>I do tha Lorem Ipsumlings</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong><u>Hades</strong></u></p><br>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="images/hades.gif" class="img-circle person" alt="hades" width="255" height="255">
+      </a>
+      <div id="demo3" class="collapse">
+        <p>I do tha Lorem Ipsumlings</p>
+        <p>I do tha Lorem Ipsumlings'</p>
+        <p>I do tha Lorem Ipsumlings</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong><u>Zeus</strong></u></p><br>
+      <a href="#demo4" data-toggle="collapse">
+        <img src="images/zeus.gif" class="img-circle person" alt="Zeus" width="255" height="255">
+      </a>
+      <div id="demo4" class="collapse">
+        <p>I do tha Lorem Ipsumlings</p>
+        <p>I do tha Lorem Ipsumlings'</p>
+        <p>I do tha Lorem Ipsumlings</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong><u>Pegasus</strong></u></p><br>
+      <a href="#demo5" data-toggle="collapse">
+        <img src="images/peg2.gif" class="img-circle person" alt="Pegasus" width="255" height="255">
+      </a>
+      <div id="demo5" class="collapse">
+        <p>I do tha Lorem Ipsumlings</p>
+        <p>I do tha Lorem Ipsumlings'</p>
+        <p>I do tha Lorem Ipsumlings</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong><u>Aphrodites</strong></u></p><br>
+      <a href="#demo6" data-toggle="collapse">
+        <img src="images/afro.gif" class="img-circle person" alt="Afro" width="255" height="255">
+      </a>
+      <div id="demo6" class="collapse">
+        <p>I do tha Lorem Ipsumlings</p>
+        <p>I do tha Lorem Ipsumlings'</p>
+        <p>I do tha Lorem Ipsumlings</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong><u>Phil</strong></u></p><br>
+      <a href="#demo7" data-toggle="collapse">
+        <img src="images/phil.gif" class="img-circle person" alt="Phil" width="255" height="255">
+      </a>
+      <div id="demo7" class="collapse">
+        <p>I do tha Lorem Ipsumlings</p>
+        <p>I do tha Lorem Ipsumlings'</p>
+        <p>I do tha Lorem Ipsumlings</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong><u>Alcmene</strong></u></p><br>
+      <a href="#demo8" data-toggle="collapse">
+        <img src="images/mum.gif" class="img-circle person" alt="Alcmene" width="255" height="255">
+      </a>
+      <div id="demo8" class="collapse">
+        <p>I do tha Lorem Ipsumlings</p>
+        <p>I do tha Lorem Ipsumlings'</p>
+        <p>I do tha Lorem Ipsumlings</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong><u>Muses</strong></u></p><br>
+      <a href="#demo9" data-toggle="collapse">
+        <img src="images/muses.gif" class="img-circle person" alt="Muses" width="255" height="255">
+      </a>
+      <div id="demo9" class="collapse">
+        <p>I do tha Lorem Ipsumlings</p>
+        <p>I do tha Lorem Ipsumlings'</p>
+        <p>I do tha Lorem Ipsumlings</p>
+      </div>
+    </div>        
+  </div>
+</div>
+
+<!-- Container (Watch Section) -->
+<div id="watchnow" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">WATCH NOW!</h3>
+    <p class="text-center">Watch Disney's Hercules Film<br> Remember to also tune into Season 1 and 2 of Hercules!</p>
+    <ul class="list-group">
+      <li class="list-group-item"><span class="label label-danger"> Watch Season 1</span><span class="badge">25 Episdoes</span></li>
+      <li class="list-group-item"><span class="label label-danger">Watch Season 2</span><span class="badge">25 Episdoes</span></li> 
+      <li class="list-group-item"><span class="label label-danger">Watch  Hercules Film</span> <span class="badge">Released Date: 1997</span></li> 
+    </ul>
+    
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="images/Filmcover.jpg" alt="Film Cover" width="400" height="300">
+          <p><strong>Hercules Film</strong></p>
+          <p>Friday 27 November 2015</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Watch</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="images/series.jpg" alt="Season 1" width="400" height="300">
+          <p><strong>Season 1</strong></p>
+          <p>Saturday 28 November 2015</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Watch</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="images/series.jpg" alt="Season 2" width="400" height="300">
+          <p><strong>Season 2</strong></p>
+          <p>Sunday 29 November 2015</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Watch</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">�</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Watch Now</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $0 per person</label>
+              <input type="number" class="form-control" id="psw" placeholder="How many?">
+            </div>
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+              <button type="submit" class="btn btn-block">Pay 
+                <span class="glyphicon glyphicon-ok"></span>
+              </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p>Need <a href="#">help?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container">
+  <form action="/success.html" method="post" id="contact" data-netlify="true" name="contact">
+    <input type="hidden" name="contact" value="contact" />
+  <h3 class="text-center">Contact</h3>
+  <p class="text-center"><em>We love our fans!</em></p>
+  <div class="row">
+    <div class="col-md-4">
+      <p>Fan? Drop a note.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>England, UK</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: +44 000000000</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: support@evase.net</p>
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <br>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div> </form>
+  </div>
+  <br>
+  <h3 class="text-center">From Evase</h3>
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Phil</a></li>
+    <li><a data-toggle="tab" href="#menu1">Megara</a></li>
+    <li><a data-toggle="tab" href="#menu2">Zeus</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h2>Rule number 1, always listen to your trainer!</h2>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h2>Congratulations, Wonder Boy. You'll make one heck of a god.</h2>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h2>That's my boy!</h2>
+    </div>
+  </div>  
+</div>  
+<!-- Image of something i want -->
+<div><img src="images/logo2.png" class="logo2" style="width:12%"></div>
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <a href="https://evase.net/" data-toggle="tooltip" title= "Visit EVASE Website" >© EVASE 2021.  All rights reserved.</a>
+  <div class="instagram">
+    <a href="https://www.instagram.com/theherculespage"  data-toggle="tooltip" title="View Instagram Page" target="_blank" rel="noopener" class="button button-icon"><svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913a5.885 5.885 0 001.384 2.126A5.868 5.868 0 004.14 23.37c.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558a5.898 5.898 0 002.126-1.384 5.86 5.86 0 001.384-2.126c.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913a5.89 5.89 0 00-1.384-2.126A5.847 5.847 0 0019.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227a3.81 3.81 0 01-.899 1.382 3.744 3.744 0 01-1.38.896c-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421a3.716 3.716 0 01-1.379-.899 3.644 3.644 0 01-.9-1.38c-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 01-2.88 0 1.44 1.44 0 012.88 0z"></path></svg></a>
+  </div>
+  <div class="github">
+    <a href="https://github.com/Ksgz" data-toggle="tooltip" title="View Github Page" target="_blank" rel="noopener" class="button button-icon"><svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg></a>  
+  </div>
+</footer>
+
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>
